@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منابع مهندسی کامپیوتر</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      min-height: 100vh;}
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a4a;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #6c63ff, #48cae4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: #888;
+      font-size: 1.1rem;
+    }
+
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+
+    .card {
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #6c63ff;
+      box-shadow: 0 8px 30px rgba(108, 99, 255, 0.2);
+    }
+
+    .card-icon { font-size: 2.2rem; }
+
+    .card h2 {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    .card .tag {
+      display: inline-block;
+      background: rgba(108, 99, 255, 0.15);
+      color: #6c63ff;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 منابع مهندسی کامپیوتر</h1>
+  <p>راهنمای جامع دروس و منابع پیشنهادی برای دانشجویان</p>
+</header>
+
+<div class="subjects">
+  <a href="networking.html" class="card">
+    <div class="card-icon">🌐</div>
+    <h2>شبکه‌های کامپیوتری</h2>
+    <p>منابع، کتاب‌ها و ویدیوهای پیشنهادی برای درس شبکه</p>
+    <span class="tag">ترم جاری</span>
+  </a>
+
+  <a href="architecture.html" class="card">
+    <div class="card-icon">⚙️</div>
+    <h2>معماری کامپیوتر</h2>
+    <p>کتاب مانو و منابع تکمیلی معماری</p>
+    <span class="tag">به زودی</span>
+  </a>
+
+  <a href="#" class="card">
+    <div class="card-icon">🔌</div>
+    <h2>مدار منطقی</h2>
+    <p>منابع درس مدار منطقی</p>
+    <span class="tag">به زودی</span>
+  </a>
+
+  <a href="#" class="card">
+    <div class="card-icon">💻</div>
+    <h2>سیستم‌عامل</h2>
+    <p>منابع و راهنمای درس سیستم‌عامل</p>
+    <span class="tag">به زودی</span>
+  </a>
+    <a href="automata.html" class="card">
+    <div class="card-icon">00101</div>
+    <h2>نظریه زبان‌ها و ماشین‌ها</h2>
+    <p>منابع و راهنمای درس نظریه زبان‌ها و ماشین‌ها</p>
+    <span class="tag">به زودی</span>
+  </a>
+</div>
+
+</body>
+</html>
