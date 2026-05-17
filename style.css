@@ -1,18 +1,170 @@
+/* ===== Galaxy Background ===== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #e4e4e7;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+   /* background: */
+    /* url("images/bring-night-space-wallpaper-with-glowing-starfield_1017-53512.avif") center/cover no-repeat; */
+}
+
+/* floating nebula layers */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  /* background:
+    url("images/bring-night-space-wallpaper-with-glowing-starfield_1017-53512.avif") center/cover no-repeat; */
+  opacity: 0.25;
+  /* animation: floatGalaxy 30s ease-in-out infinite alternate; */
+}
+
+body::after {
+  background:
+    /* radial-gradient(circle at 20% 30%, rgba(99, 101, 241, 0.115), transparent 80%), */
+    radial-gradient(circle at 82% 5%, rgba(6,182,212,0.15), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(139,92,246,0.14), transparent 32%);
+  filter: blur(40px);
+}
+
+/* subtle stars overlay */
+.container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* background: url("images/stars.avif") center/cover; */
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+  /* animation: starsMove 90s linear infinite; */
+}
+
+/* glassmorphism effect */
+.box,
+.card,
+.book-card,
+.cpu-card,
+.pipe-step,
+.link-btn {
+  background: rgba(15, 18, 35, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* glowing hover */
+.box:hover,
+.card:hover {
+  box-shadow:
+    0 0 25px rgba(99,102,241,0.18),
+    0 0 60px rgba(6,182,212,0.08);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* glowing title */
+header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #67e8f9, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(99,102,241,0.35));
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+
+/* animated buttons */
+.link-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.link-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+  transition: 0.7s;
+}
+
+.link-btn:hover::before {
+  right: 120%;
+}
+
+.link-btn:hover {
+  box-shadow: 0 0 20px rgba(99,102,241,0.3);
+  transform: translateY(-2px);
+}
+
+/* animations */
+@keyframes floatGalaxy {
+  from {
+    transform: scale(1) translateY(0px);
+  }
+  to {
+    transform: scale(1.08) translateY(-20px);
+  }
+}
+
+@keyframes starsMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-400px);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(99,102,241,0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(139,92,246,0.5));
+  }
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #0a0a0f;
+  /* background: #0a0a0f; */
+  background-color:  #232629;
   color: #e4e4e7;
   min-height: 100vh;
+    background:
+   
+    linear-gradient(rgba(5, 8, 20, 0.976), rgba(5, 8, 20, 0.996)),
+    url("images/bg.avif") center/cover fixed no-repeat;
 }
 
 header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  padding: 50px 24px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
+  padding: 42px 24px;
+  /* border-bottom: 1px solid rgba(255,255,255,0.05); */
   position: relative;
   overflow: hidden;
+    background:
+    url("images/bg.avif") center/cover no-repeat ,
+    linear-gradient(rgba(10, 10, 30, 0), rgba(10, 10, 30, 0)) ; 
+  /* border-bottom: 1px solid rgba(255,255,255,0.1); */
 }
 
 header::before {
@@ -22,7 +174,7 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.08), transparent 50%);
+  /* background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.08), transparent 50%); */
   pointer-events: none;
 }
 
